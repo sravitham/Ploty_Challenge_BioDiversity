@@ -59,7 +59,7 @@ function Graphs(id){
             xaxis: {title:"OTU ID"},
             margin: {t:30}
         };
-        Plotly.newPlot("bubble",data, layout);
+        Plotly.newPlot("bubble",data, layout, {scrollZoom: true});
 
         var datatrace = {
             x: sample_values.slice(0,10).reverse(),
