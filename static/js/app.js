@@ -54,11 +54,9 @@ function Graphs(id){
         };
         var data = [datatrace];
         var layout = {
-            title: 'Bacteria Cultures per Sample',
             showlegend: false,
             hovermode: 'closest',
-            xaxis: {title:"OTU (Operational Taxonomic Unit) ID " + id},
-            font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" },
+            xaxis: {title:"OTU ID"},
             margin: {t:30}
         };
         Plotly.newPlot("bubble",data, layout);
@@ -72,11 +70,7 @@ function Graphs(id){
             orientation: "h"
         };
         var data = [datatrace];
-        var layout = {
-            title: "Top Ten OTUs for Test Subject ID #: " + id,
-            font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" }
-        };
-        Plotly.newPlot("bar", data, layout);  
+        Plotly.newPlot("bar", data);  
         });
 
     };
